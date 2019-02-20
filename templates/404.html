@@ -1,0 +1,9 @@
+{% extends 'base.html' %} 
+{% block title %}
+    Not found
+{% endblock %}
+
+{% block main %}
+    <h1>404 Not found</h1>
+    <p>We could not find the page you were looking for <a href="{% url 'core:movie-list' %}">Go back to home?</a></p>
+{% endblock %}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>
+            {% block title %}
+                IMDB
+            {% endblock %}
+        </title>
+        <style type="text/css" media="screen">
+            .imdb-masthead{
+                background-color: #EEEEEE
+                margin-bottom: 1em'
+            }
+        </style>
+    </head>
+    <body>
+        <div class="imdb-masthead">
+            <div class="container">
+                <nav class="nav">
+                    <div class="navbar-brand">IMDB</div>
+                    <a class="nav-link" href="{% url 'core:movie-list' %}">Movies</a>
+                </nav>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 imdb-main">
+                    {% block main %} {% endblock %}
+                </div>
+                <div class="col-sm-3 offset-sm-1 imdb-sidebar">
+                    {% block sidebar %} {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
